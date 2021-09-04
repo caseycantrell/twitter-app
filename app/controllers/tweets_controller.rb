@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
 
   def index
-    tweets = Tweets.all
+    tweets = Tweet.all
     render json: tweets
   end
 
@@ -30,5 +30,5 @@ class TweetsController < ApplicationController
     tweet.destroy
     render json: {message: "That thing has been obliterated."}
   end
-  
+
 end
