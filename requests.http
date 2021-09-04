@@ -1,0 +1,67 @@
+######## USERS ########
+
+##INDEX##
+GET http://localhost:3000/users
+
+##SHOW##
+
+GET http://localhost:3000/users/1
+
+
+###CREATE###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "username": "",
+  "url": ""
+}
+
+###UPDATE###
+
+PATCH http://localhost:3000/tweets/1
+Content-Type: application/json
+
+{
+  "username": ""
+}
+
+###DELETE### 
+
+DELETE http://localhost:3000/tweets/1
+
+######### TWEETS ##########
+######## USERS ########
+
+##INDEX##
+GET http://localhost:3000/tweets
+
+##SHOW##
+
+GET http://localhost:3000/tweets/1
+
+
+###CREATE###
+
+POST http://localhost:3000/tweets
+Content-Type: application/json
+
+{
+  "user_id": "",
+  "body": "",
+  "date_posted": ""
+}
+
+###UPDATE###
+
+PATCH http://localhost:3000/tweets/1
+Content-Type: application/json
+
+{
+  "body": ""
+}
+
+###DELETE### 
+
+DELETE http://localhost:3000/tweets/1
