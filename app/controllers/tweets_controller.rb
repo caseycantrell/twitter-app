@@ -11,11 +11,16 @@ class TweetsController < ApplicationController
   end
 
   def create
-    tweet = Tweet.create(
+    tweet = Tweet.new(
       user_id: params[:user_id],
       body: params[:body],
       date_posted: params[:date_posted]
     )
+    if tweet.save
+      render json: tweet
+    else
+      render json: {errors: tweet.errors.full_messages}
+    end
   end
 
   def update
