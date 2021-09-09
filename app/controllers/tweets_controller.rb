@@ -28,6 +28,11 @@ class TweetsController < ApplicationController
     tweet.user_id = params[:user_id] || tweet.user_id
     tweet.body = params[:body] || tweet.body
     tweet.date_posted = params[:date_posted] || tweet.date_posted
+    if tweet.save
+      render json: tweet
+    else
+      render json: {errors: tweet.errors.full_messages}
+    end
   end
 
   def destroy
